@@ -14,6 +14,7 @@ export default {
   data() {
     return {
       store,
+      characterList: [],
     };
   },
   created() {
@@ -21,6 +22,8 @@ export default {
 
     axios.get(store.APIurl).then((response) => {
       this.store.ApiCall = response.data;
+      this.store.listCharacter = response.data.results;
+      this.characterList = store.listCharacter;
     });
   },
 };
