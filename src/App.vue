@@ -19,19 +19,32 @@ export default {
 </script>
 
 <template>
-  <titleComp></titleComp>
-  <searchComp></searchComp>
+  <header>
+    <titleComp></titleComp>
+    <searchComp></searchComp>
+  </header>
+
   <div class="container">
     <div class="row">
       <cardCharacterComp
         class="cardCharacterComp"
         v-for="character in characterList"
-        >{{ character.name }}</cardCharacterComp
+        :name="character.name"
+        :image="character.image"
+        :status="character.status"
+        :species="character.species"
       >
+      </cardCharacterComp>
     </div>
   </div>
 </template>
 <style scoped lang="scss">
+header {
+  text-align: center;
+}
+titleComp {
+  margin: 20px;
+}
 .container {
   width: 1100px;
   margin: 0 auto;
@@ -41,8 +54,8 @@ export default {
     display: flex;
     flex-wrap: wrap;
     .cardCharacterComp {
-      width: calc(100% / 4 - 20px);
-      padding: 5px;
+      width: calc(100% / 4 - 10px);
+
       margin: 5px;
     }
   }

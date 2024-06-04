@@ -1,3 +1,8 @@
-* {
-  text-align: center;
+@use "./partials/reset.scss" as *;
+@use "./partials/size.scss" as *;
+@use "./partials/variables.scss" as *;
+body {
+  background-image: url(/rickandmorty.png);
+  background-size: 300px;
+  background-repeat: repeat;
 }
