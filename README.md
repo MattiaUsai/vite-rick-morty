@@ -8,7 +8,7 @@ e con i dati restituiti, stampate una card per ogni personaggio.
 Approfittatene per esplorare la documentazione di un'api:
 https://rickandmortyapi.com/
 NB: non occupatevi della parte di ricerca.
-PS: Il font utilizzato è MontSerrat ;)
+PS: Il font utilizzato è MontSerrat ;
 _Bonus:_
 Creare un componente loader da visualizzare fintantoché i risultati non sono pronti.
 Buona giornata e buon lavoro!

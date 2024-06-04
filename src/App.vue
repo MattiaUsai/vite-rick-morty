@@ -1,5 +1,13 @@
-<script setup></script>
+<script>
+import titleComp from "./components/title.vue";
+export default {
+  data() {},
+  components: {
+    titleComp,
+  },
+};
+</script>
 
 <template>
-  <h1>Rick and Morty App</h1>
+  <titleComp></titleComp>
 </template>
