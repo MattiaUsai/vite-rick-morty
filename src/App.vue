@@ -2,18 +2,26 @@
 import titleComp from "./components/title.vue";
 import searchComp from "./components/searchComp.vue";
 import cardCharacterComp from "./components/cardCharacterComp.vue";
-import list from "./rickandmorty.json";
-export default {
-  data() {
-    return {
-      characterList: list.results,
-    };
-  },
+import axios from "axios";
+import { store } from "./store";
 
+export default {
   components: {
     titleComp,
     searchComp,
     cardCharacterComp,
+  },
+  data() {
+    return {
+      store,
+    };
+  },
+  created() {
+    console.log("chiamata api");
+
+    axios.get(store.APIurl).then((response) => {
+      this.store.ApiCall = response.data;
+    });
   },
 };
 </script>
